@@ -1,0 +1,36 @@
+﻿
+<link rel="stylesheet" href="slider.css">
+<!-- Подключаем JS слайдера -->
+<script defer src="slider.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // инициализация слайдера
+        new ItcSimpleSlider('.itcss', {
+            loop: true,
+            autoplay: false,
+            interval: 5000,
+            swipe: true,
+        });
+    });
+</script>
+<div class="itcss">
+    <div class="itcss__wrapper">
+        <div class="itcss__items">
+            <div class="itcss__item">
+                <div style="height: 250px; background: #607d8b;"></div>
+            </div>
+            <div class="itcss__item">
+                <div style="height: 250px; background: #3f51b5;"></div>
+            </div>
+            <div class="itcss__item">
+                <div style="height: 250px; background: #607d8b;"></div>
+            </div>
+            <div class="itcss__item">
+                <div style="height: 250px; background: #3f51b5;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Стрелки для перехода к предыдущему и следующему слайду -->
+    <a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
+    <a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
+</div>

@@ -1,0 +1,62 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<WebApplication5.Models.Game>
+@{
+    Layout = "_Layout" ;
+}
+
+<div >
+    <div class="breadcrumbs"></div>
+
+
+    <h2 class="pageheader full">
+        Асортимент
+    </h2>
+
+    <div class="termcontainer">
+
+        <div id="termsnone">
+            <div class="pagesubheader">Всі продукти</div>
+        </div>
+
+        <div class="searchtag" id="searchtag_tmpl" style="display: none"><img class="search_crouton_icon"><span class="label"></span> <a href="#" class="btn"></a></div>
+
+    </div>
+    <div id="search_resultsRows">
+        @{
+
+            foreach (var item in Model)
+            {
+                <a href="Game/Game/@item.Id" style="background-color: rgba(0, 0, 0, 0.2); transition: background-color 1s ease-in 0s;" class="search_result_row ds_collapse_flag  app_impression_tracked" data-gpnav="item" data-ds-steam-deck-compat-handled="true">
+                    <div class="col search_capsule"><img height=45 ; width=110 ; src="~/img/@item.Id/1.jpg" srcset="~/img/@item.Id/1.jpg 1x, ~/img/@item.Id/1.jpg 2x" class></div>
+                    <div class="responsive_search_name_combined">
+                        <div class="col search_name ellipsis">
+                            <span class="title">@item.Name</span>
+                            <div>
+                                <span class="platform_img win"></span>
+                            </div>
+                        </div>
+                        <div class="col search_released responsive_secondrow">@item.Date_of_public</div>
+                        <div class="col search_reviewscore responsive_secondrow">
+                        </div>
+
+
+                        <div class="col search_price_discount_combined responsive_secondrow" data-price-final="119900">
+                            <div class="col search_discount responsive_secondrow">
+                            </div>
+                            <div class="col search_price  responsive_secondrow">
+                                @item.Price
+                                ₴
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div style="clear: left;"></div>
+                </a>
+            }
+        }
+    </div>
+       </div>
+    
+
+
