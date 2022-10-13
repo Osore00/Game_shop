@@ -32,10 +32,28 @@
                     <img style="width:100%;" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg?t=1663663573">
                 </div>
 
-                <div class="block_content page_content" id="game_highlights" data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">
+                <div class="about" id="game_highlights" data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">
 
                     
 
+                    
+                    <div class="itcss">
+                        <div class="itcss__wrapper">
+                            <div class="itcss__items">
+                                @{
+                                    for (int i = 1; i <= int.Parse(Model.Photos); i++)
+                                            {
+                                            <div class="itcss__item">
+                                                <img class="itcss__item_img" src="/img/@Model.Id/_@i.ToString()_.jpg">
+                                            </div>
+                                }
+                                }
+                            </div>
+                        </div>
+                        <!-- Стрелки для перехода к предыдущему и следующему слайду -->
+                        <a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
+                        <a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
+                    </div>
                     <div class="rightcol" data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">
                         <div class="glance_ctn">
                             <div id="gameHeaderImageCtn" class="game_header_image_ctn">
@@ -68,24 +86,6 @@
                             <div style="clear: both;"></div>
                         </div>
                     </div>
-                    <div class="itcss">
-                        <div class="itcss__wrapper">
-                            <div class="itcss__items">
-                                @{
-                                    for (int i = 1; i <= int.Parse(Model.Photos); i++)
-                                            {
-                                            <div class="itcss__item">
-                                                <img class="itcss__item_img" src="/img/@Model.Id/_@i.ToString()_.jpg">
-                                            </div>
-                                }
-                                }
-                            </div>
-                        </div>
-                        <!-- Стрелки для перехода к предыдущему и следующему слайду -->
-                        <a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
-                        <a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
-                    </div>
-                    
                     </div>
 
 

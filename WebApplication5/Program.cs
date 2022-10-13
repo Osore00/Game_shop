@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddMvc();
 string connection = "Server = (localdb)\\mssqllocaldb; Database = games; Trusted_Connection = True;" ;
-builder.Services.AddDbContext<AppDBContent>(options => options.UseSqlServer(connection));
+builder.Services.AddDbContext<AppDBContext>(options => options.UseSqlServer(connection));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

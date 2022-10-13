@@ -8,8 +8,8 @@ namespace WebApplication5.Controllers
 {
     public class GameController : Controller
     {
-        AppDBContent db;
-        public GameController(AppDBContent context)
+        AppDBContext db;
+        public GameController(AppDBContext context)
         {
             db = context;
         }

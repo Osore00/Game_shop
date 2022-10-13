@@ -8,8 +8,8 @@ namespace WebApplication5.Controllers
 {
     public class HomeController : Controller
     {
-        AppDBContent db;
-        public HomeController(AppDBContent context)
+        AppDBContext db;
+        public HomeController(AppDBContext context)
         {
             db = context;
         }

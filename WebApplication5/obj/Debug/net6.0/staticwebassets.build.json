@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HqpySbbkDiOpeW4GZiv+rLAcB16Ir3uAbCTOsN30t8Q=",
+  "Hash": "XjD3kGs7pGKp6+HELZE+FNT12zv9K88CUbvoNl1WcmI=",
   "Source": "WebApplication5",
   "BasePath": "_content/WebApplication5",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "WebApplication5\\wwwroot",
       "Source": "WebApplication5",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\css\\slider.css",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\css\\slider.css",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
       "RelativePath": "css/slider.css",
       "AssetKind": "All",
@@ -34,12 +34,12 @@
       "OriginalItemSpec": "wwwroot\\css\\slider.css"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\3\\_1_.jpg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\1\\_1_.jpg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
-      "RelativePath": "img/3/_1_.jpg",
+      "RelativePath": "img/1/_1_.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,15 +48,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\3\\_1_.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\1\\_1_.jpg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\3\\_2_.jpg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\1\\_2_.jpg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
-      "RelativePath": "img/3/_2_.jpg",
+      "RelativePath": "img/1/_2_.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,15 +65,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\3\\_2_.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\1\\_2_.jpg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\3\\_3_.jpg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\1\\_3_.jpg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
-      "RelativePath": "img/3/_3_.jpg",
+      "RelativePath": "img/1/_3_.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,15 +82,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\3\\_3_.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\1\\_3_.jpg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\3\\_4_.jpg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\1\\_4_.jpg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
-      "RelativePath": "img/3/_4_.jpg",
+      "RelativePath": "img/1/_4_.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\3\\_4_.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\1\\_4_.jpg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\3\\1.jpg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\1\\1.jpg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
-      "RelativePath": "img/3/1.jpg",
+      "RelativePath": "img/1/1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\3\\1.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\1\\1.jpg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\8\\_1_.jpg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\2\\_1_.jpg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
-      "RelativePath": "img/8/_1_.jpg",
+      "RelativePath": "img/2/_1_.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\8\\_1_.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\2\\_1_.jpg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\8\\_2_.jpg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\2\\_2_.jpg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
-      "RelativePath": "img/8/_2_.jpg",
+      "RelativePath": "img/2/_2_.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,15 +150,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\8\\_2_.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\2\\_2_.jpg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\8\\_3_.jpg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\2\\_3_.jpg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
-      "RelativePath": "img/8/_3_.jpg",
+      "RelativePath": "img/2/_3_.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +167,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\8\\_3_.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\2\\_3_.jpg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\8\\_4_.jpg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\2\\_4_.jpg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
-      "RelativePath": "img/8/_4_.jpg",
+      "RelativePath": "img/2/_4_.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,15 +184,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\8\\_4_.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\2\\_4_.jpg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\8\\1.jpg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\2\\1.jpg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
-      "RelativePath": "img/8/1.jpg",
+      "RelativePath": "img/2/1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,13 +201,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\8\\1.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\2\\1.jpg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\after.svg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\after.svg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
       "RelativePath": "img/after.svg",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\img\\after.svg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\data_image_svg+xml;charset=utf8,_svg xmlns='http___www.w3.org_2000_svg' fill='#fff' viewBox='0 0 8 8'__path d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'____svg_.pdf",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\data_image_svg+xml;charset=utf8,_svg xmlns='http___www.w3.org_2000_svg' fill='#fff' viewBox='0 0 8 8'__path d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'____svg_.pdf",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
       "RelativePath": "img/data_image_svg+xml;charset=utf8,_svg xmlns='http___www.w3.org_2000_svg' fill='#fff' viewBox='0 0 8 8'__path d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'____svg_.pdf",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\img\\data_image_svg+xml;charset=utf8,_svg xmlns='http___www.w3.org_2000_svg' fill='#fff' viewBox='0 0 8 8'__path d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'____svg_.pdf"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\img\\twitter.svg",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\img\\twitter.svg",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
       "RelativePath": "img/twitter.svg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\img\\twitter.svg"
     },
     {
-      "Identity": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\js\\slider.js",
+      "Identity": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\js\\slider.js",
       "SourceId": "WebApplication5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\andre\\source\\repos\\WebApplication5\\WebApplication5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\andre\\source\\repos\\Game_shop\\WebApplication5\\wwwroot\\",
       "BasePath": "_content/WebApplication5",
       "RelativePath": "js/slider.js",
       "AssetKind": "All",

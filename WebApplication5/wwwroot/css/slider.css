@@ -237,7 +237,9 @@ span.platform_img.win {
 }
 .page_content_ctn {
     padding-top: 20;
-    padding-bottom:0;
+    padding-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 .page_title_area {
     height: 370;
@@ -269,4 +271,10 @@ span.platform_img.win {
     margin: 0px auto;
     max-width: 950;
     min-width: 530;
+    width: 100%
+}
+.about {
+    display: flex;
+    flex-wrap: wrap;
+
 }
