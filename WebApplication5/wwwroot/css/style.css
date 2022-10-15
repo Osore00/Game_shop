@@ -181,6 +181,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     min-width: 305px;
+    margin-bottom: 8px;
 
     border-radius: 10px;
     background-color: var(--main_color_dark);

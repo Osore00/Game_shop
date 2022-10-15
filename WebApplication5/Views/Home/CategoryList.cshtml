@@ -1,0 +1,23 @@
+﻿@model WebApplication5.Models.Category
+@{
+    Layout = "_Layout";
+}
+<div>
+    <h4>Категорія @Model.Name</h4>
+    <hr />
+    <dl>
+        <dt>Назва</dt>
+        <dd>
+            @Model.Name
+        </dd>
+        <dt>Ігри</dt>
+        <dd>
+            <ul>
+                @foreach (var game in Model.Games)
+                {
+                    <li>@game.Name (@game.Price $)</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+</div>

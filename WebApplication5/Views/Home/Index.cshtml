@@ -37,7 +37,7 @@
                 @{
                     foreach (var item in Model[top_prod].Categories)
                     {
-                            <div class="categorys__cat"><a href="" class="cat__link">@item.Name</a></div>
+                        <div class="categorys__cat"><a href="/Home/CategoryList/@item.Id" class="cat__link">@item.Name</a></div>
                     }
                 }
                
@@ -54,6 +54,7 @@
         </div>
     </div>
 </div>
+@Html.ActionLink("Добавити гравця", "Create")
 <div class="catalog">
     <div class="ctlg__head">Каталог</div>
     <div class="ctlg__items">
@@ -74,11 +75,16 @@
                         </div>
                     </div>
                     <div class="ctlg_price buy">@item.Price ₴</div>
+                    @Html.ActionLink("Редагувати", "Edit", new { id = item.Id })
+                    @Html.ActionLink("Видалити", "Delete", new { id = item.Id })
                 </a>
             }
             
         }
         </div>
+    <p>
+        @Html.ActionLink("Каталог жанрів", "ListCategorys")
+    </p>
 
 </div>
 
