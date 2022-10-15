@@ -1,62 +1,90 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@model IEnumerable<WebApplication5.Models.Game>
+﻿
+@model List<WebApplication5.Models.Game>
 @{
     Layout = "_Layout" ;
 }
 
-<div >
-    <div class="breadcrumbs"></div>
 
 
-    <h2 class="pageheader full">
-        Асортимент
-    </h2>
+<div class="show_box">
+    <div class="box__head">Найпопулярніший продукт</div>
+    <div class="box__showcase showcase">
+        @{int top_prod = 1;
+        }
+        <div class="box__big_image">
+            <a href="Game/Game/@Model[top_prod].Id">
+                <img src="~/img/@Model[top_prod].Id/1.jpg" alt="big_image"
+                     class="big_image">
+            </a>
 
-    <div class="termcontainer">
-
-        <div id="termsnone">
-            <div class="pagesubheader">Всі продукти</div>
         </div>
+        <div class="box__inf inf">
+            <div class="inf__name"><a href="Game/Game/@Model[top_prod].Id">@Model[top_prod].Name</a></div>
+            <div class="inf__imgs">
+                @{
 
-        <div class="searchtag" id="searchtag_tmpl" style="display: none"><img class="search_crouton_icon"><span class="label"></span> <a href="#" class="btn"></a></div>
+               for (int i = 1; i < 5; i++)
+                    {
+                                           <div class="inf__img">
+                        <img src="~/img/@Model[top_prod].Id/_@i.ToString()_.jpg" alt="">
+                    </div> 
+                    }
 
+                }
+            </div>
+            <div class="inf__categorys categorys">
+         
+                @{
+                    foreach (var item in Model[top_prod].Categories)
+                    {
+                            <div class="categorys__cat"><a href="" class="cat__link">@item.Name</a></div>
+                    }
+                }
+               
+            </div>
+            <div class="buy">
+                <div class="buy__price">
+                    @Model[top_prod].Price ₴
+                </div>
+                <div class="buy_button">
+                    <a href="" class="buy__link">В кошик</a>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div id="search_resultsRows">
-        @{
-
-            foreach (var item in Model)
+</div>
+<div class="catalog">
+    <div class="ctlg__head">Каталог</div>
+    <div class="ctlg__items">
+       @{foreach (var item in Model)
             {
-                <a href="Game/Game/@item.Id" style="background-color: rgba(0, 0, 0, 0.2); transition: background-color 1s ease-in 0s;" class="search_result_row ds_collapse_flag  app_impression_tracked" data-gpnav="item" data-ds-steam-deck-compat-handled="true">
-                    <div class="col search_capsule"><img height=45 ; width=110 ; src="~/img/@item.Id/1.jpg" srcset="~/img/@item.Id/1.jpg 1x, ~/img/@item.Id/1.jpg 2x" class></div>
-                    <div class="responsive_search_name_combined">
-                        <div class="col search_name ellipsis">
-                            <span class="title">@item.Name</span>
-                            <div>
-                                <span class="platform_img win"></span>
-                            </div>
-                        </div>
-                        <div class="col search_released responsive_secondrow">@item.Date_of_public</div>
-                        <div class="col search_reviewscore responsive_secondrow">
-                        </div>
-
-
-                        <div class="col search_price_discount_combined responsive_secondrow" data-price-final="119900">
-                            <div class="col search_discount responsive_secondrow">
-                            </div>
-                            <div class="col search_price  responsive_secondrow">
-                                @item.Price
-                                ₴
-                            </div>
+                <a class="showcase ctlg__showcase" href="Game/Game/@item.Id">
+                    <div class="ctlg__img"><img src="~/img/@item.Id/1.jpg" alt="Main IMG"></div>
+                    <div class="ctlg__inf">
+                        <div class="ctlg__name">@item.Name</div>
+                        <div class="ctl_categorys categorys">
+                        @{
+                            foreach (var cat in item.Categories)
+                        {
+                            <div class="categorys__cat">@cat.Name</div>
+                        }
+                            
+                        }
                         </div>
                     </div>
-
-
-                    <div style="clear: left;"></div>
+                    <div class="ctlg_price buy">@item.Price ₴</div>
                 </a>
             }
+            
         }
-    </div>
-       </div>
+        </div>
+
+</div>
+
+
+
+
     
 
 

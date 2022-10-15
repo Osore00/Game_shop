@@ -4,40 +4,13 @@
     Layout = "_Layout";
 }
 
-<div class="page_content_ctn">
+<div class="main__container game_cont">
 
-    <div class="page_title_area game_title_area page_content" data-gpnav="columns">
-
-        <div class="apphub_HomeHeaderContent">
-
-            <div class="apphub_HeaderStandardTop">
-                <div id="appHubAppName" class="apphub_AppName">@Model.Name</div>
-                <div style="clear: both"></div>
-
-            </div>
-
-        </div>
-
-        <div class="block">
-            <script type="text/javascript">
-                var strRequiredVersion = "9";
-                if (typeof (g_bIsOnMac) != 'undefined' && g_bIsOnMac)
-                    strRequiredVersion = "10.1.0";
-
-            </script>
-            <div class="game_background_glow">
-
-
-                <div data-panel="{&quot;autoFocus&quot;:true,&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="responsive_page_header_img" style="display: none;">
-                    <img style="width:100%;" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg?t=1663663573">
-                </div>
-
-                <div class="about" id="game_highlights" data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">
-
-                    
-
-                    
-                    <div class="itcss">
+    <div class="content__colm_first">
+        <div class="long_block">
+            <div class="long__head">@Model.Name</div>
+            <div class="long__img">
+                <div class="itcss">
                         <div class="itcss__wrapper">
                             <div class="itcss__items">
                                 @{
@@ -54,68 +27,57 @@
                         <a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
                         <a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
                     </div>
-                    <div class="rightcol" data-panel="{&quot;flow-children&quot;:&quot;column&quot;}">
-                        <div class="glance_ctn">
-                            <div id="gameHeaderImageCtn" class="game_header_image_ctn">
-                                <img class="game_header_image_full" src="/img/@Model.Id/1.jpg">
-
-
-                            </div>
-                            <div class="game_description_snippet">
-                                @Model.LongDesc
-                            </div>
-
-                            <div class="glance_ctn_responsive_left">
-
-                                <div class="release_date">
-                                    <div class="subtitle column">Дата випуску:</div>
-                                    <div class="date">10 дек. 2020</div>
-                                </div>
-
-                                <div class="dev_row">
-                                    <div class="subtitle column">Розробник:</div>
-                                    <div class="summary column" id="developers_list">
-                                        <a ">@Model.Producer</a>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-
-                            <div style="clear: both;"></div>
-                        </div>
-                    </div>
-                    </div>
-
-
-                </div>
-                
             </div>
-        
-        </div>
-    <div class="game_area_purchase_game_wrapper">
-        <div class="game_area_purchase_game" id="game_area_purchase_section_add_to_cart_367653">
+            <div class="long_gan">Жанри: </div>
+            <div class="long__categorys">
+                @{
+                    foreach (var item in Model.Categories)
+                    {
+                        <div class="long_cat">
+                            <a href="Category/Category/@item.Id">@item.Name</a>
+                        </div>
+                    }
+                    
+                }
 
-            <div class="game_area_purchase_platform"><span class="platform_img win"></span></div>
-            <h1>
-                Купити @Model.Name
-            </h1>
-
-            <div class="game_purchase_action">
-                <div class="game_purchase_action_bg">
-                    <div class="game_purchase_price price" data-price-final="89900">
-                        @Model.Price ₴
-                    </div>
-                    <div class="btn_addtocart">
-                        <a data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" class="btn_green_steamui btn_medium" href="javascript:addToCart(367653);" id="btn_add_to_cart_367653">
-                            <span>В корзину</span>
-                        </a>
-
-                    </div>
-                </div>
+            </div>
+            <div class="long__desk">
+            @Model.LongDesc
             </div>
         </div>
     </div>
-    
-</div>
+    <div class="content__colm_two">
+        <div class="short_block">
+            <div class="short__img">
+                <img src="~/img/@Model.Id/1.jpg" alt="@Model.Name">
+            </div>
+            <a href="" class="short__buy">
+                <div>В КОШИК</div>
+            </a>
+            <div class="short_inf">
+                <div class="inf__studia inf_g">
+                    <div class="left_inf">Ціна: </div>
+                    <div class="right_inf">@Model.Price ₴</div>
+                </div>
+                <div class="inf__studia inf_g">
+                    <div class="left_inf">Розробник: </div>
+                    <div class="right_inf">@Model.Producer</div>
+                </div>
+                <div class="inf__date inf_g">
+                    <div class="left_inf">Дата виходу: </div>
+                    <div class="right_inf">
+                        @Model.Date_of_public
+                    </div>
+                </div>
+                <div class="inf__platform inf_g">
+                    <div class="left_inf">Платформа:</div>
+                    <div class="right_inf">
+                        Win
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+

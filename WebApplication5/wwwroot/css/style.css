@@ -31,11 +31,11 @@ body {
 /* Обнуленя */
 html,
 body {
-    font-family: sans-serif;
+    font-family: Comfortaa;
     font-size: 14px;
     height: 100%;
     line-height: 1;
-    background-color: #242424;
+    background-color: var(--main_color);
     color: rgb(219, 219, 219);
 }
 
@@ -52,14 +52,29 @@ body {
     padding: 0px 15px;
 }
 
+[class*="__head"] {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 3px solid rgb(219, 219, 219);
+    padding-bottom: 5px;
+}
+
 .main {
     flex: 1 1 auto;
 }
 
+:root {
+    --main_color: #242424;
+    --main_color_dark: #1c1c1c;
+    --main_contrast_color: rgb(215, 0, 36);
+}
+
+
 /*-----------------------------------------------vvvvv---HEADER---vvv-----------------------------------*/
 
 .header {
-    background-color: #1c1c1c;
+    background-color: var(--main_color_dark);
 }
 
 .header__container {
@@ -74,7 +89,7 @@ body {
     font-family: Poppins;
     font-size: 35px;
     font-weight: 700;
-    color: rgb(215, 0, 36);
+    color: var(--main_contrast_color);
     flex: 0 0 91px;
 }
 
@@ -138,7 +153,7 @@ body {
     font-weight: 700;
 
 
-    background-color: rgb(215, 0, 36);
+    background-color: var(--main_contrast_color);
     border-radius: 5px;
     transition: background-color 0.3s ease 0s;
 }
@@ -156,26 +171,29 @@ body {
 
 }
 
-.box__head {
-    font-size: 20px;
-    padding-bottom: 15px;
+.box__showcase {
+
+    padding: 12px 15px;
+
 }
 
-.box__showcase {
+.showcase {
     display: flex;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #1c1c1c;
-    padding: 10px 15px;
     flex-wrap: wrap;
+    min-width: 305px;
+
+    border-radius: 10px;
+    background-color: var(--main_color_dark);
     box-shadow: -5px -5px 16px rgba(166, 166, 166, 0.27);
-    border-bottom: 1px solid rgb(215, 0, 36);
-    border-right: 1px solid rgb(215, 0, 36);
+    border-bottom: 1px solid var(--main_contrast_color);
+    border-right: 1px solid var(--main_contrast_color);
 }
 
 .box__big_image {
     flex: 1 1 auto;
     padding-right: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -184,8 +202,8 @@ body {
 }
 
 .box__inf {
-    padding: 5px;
-    flex: 1 1 20%;
+    padding: 2px 5px;
+    flex: 1 1 15%;
     min-width: 255PX;
     min-height: 241px;
 }
@@ -212,29 +230,237 @@ body {
 }
 
 .inf__categorys {
-    display: flex;
     margin: 7px 0px;
-    flex-wrap: wrap;
 }
 
-.int__cat {
+.categorys {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
+    max-width: 190px;
+}
+
+.categorys__cat {
     font-family: Poppins;
     font-size: 16px;
-    margin-right: 5px;
     padding: 2px 4px;
-    border-radius: 2px;
-    overflow: hidden;
-    background-color: rgb(215, 0, 36);
+    border-left: 1px solid var(--main_contrast_color);
+
+
+
 }
 
 .cat__link {}
 
-.inf__buy {
+.buy {
     display: flex;
+    padding: 10px 5px;
+    padding-top: 12px;
+    padding-bottom: 0px;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 22px;
+
+    font-weight: 700;
 }
 
-.inf__price {}
+.buy__price {
+    margin-right: 15px;
 
-.inf_button {}
+}
 
-.inf__link {}
+.buy_button {
+    border: 1px solid aliceblue;
+
+    padding: 7px 10px;
+    border-radius: 3px;
+    align-items: center;
+
+}
+
+.buy__link {}
+
+/*-------------------------------------------VVVVVV---------КАТАЛОГ------VVVVVV--------------------------------------*/
+
+.catalog {
+    margin: 30px 0;
+}
+
+.ctlg__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.ctlg__showcase {
+    flex: 1 1 40%;
+
+    padding: 15px 15px;
+
+    border: none;
+
+}
+
+
+
+.ctlg__img img {
+    height: 90px;
+}
+
+.ctlg__inf {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 8px;
+    font-size: 20px;
+    max-width: 250px;
+}
+
+.ctlg__name {}
+
+.ctl_categorys {}
+
+.categorys__cat {}
+
+.ctlg_price {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+}
+
+/*---------------------------------VVVVVV-----FOOTER-----VVVVV----------------------------------*/
+
+.footer {
+    background-color: var(--main_color_dark);
+}
+
+
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.footer__cards {
+    display: flex;
+    align-items: center;
+}
+
+.footer-text {}
+
+
+/*=============================================PAGE====2=================================================*/
+
+/*--------------------------------------------MAIN-----------------------------------------------------*/
+.game_cont {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    font-weight: 700;
+}
+
+.content__colm_first {
+    flex: 1 1 60%;
+}
+
+.long_block {
+    margin-top: 15px;
+    padding-right: 20px;
+}
+
+.long__head {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.long__img img {
+    width: 100%;
+}
+
+.long__categorys {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 10px;
+    gap: 20px;
+
+
+}
+
+.long_gan {
+    margin-top: 20px;
+    margin-left: 7px;
+}
+
+.long_cat {
+    padding: 10px;
+    border-left: 1px solid var(--main_contrast_color);
+}
+
+.long__desk {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.content__colm_two {
+    flex: 1 1 20%;
+
+    min-width: 240px;
+    font-size: 14px;
+    margin-top: 73px;
+
+}
+
+.short_block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.short__img img {
+    width: 100%;
+
+
+}
+
+.short__img {
+    flex: 1 0 auto;
+
+
+}
+
+.short__buy {
+    padding: 20px 10px;
+    text-align: center;
+    background-color: var(--main_color_dark);
+    border: 1px solid var(--main_contrast_color);
+    border-radius: 7px;
+    margin: 10px 0;
+}
+
+.short_inf {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+
+
+}
+
+.inf_g {
+    display: flex;
+    flex: 1 1 100%;
+    border-bottom: 0.5px solid rgba(240, 248, 255, 0.396);
+    padding-bottom: 10px;
+
+}
+
+.left_inf {
+    flex: 1 1;
+}
+
+.right_inf {
+    text-align: end;
+}

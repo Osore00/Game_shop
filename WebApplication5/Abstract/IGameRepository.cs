@@ -4,8 +4,8 @@ namespace WebApplication5.Abstract
 {
 	public interface IGameRepository
 	{
-        IEnumerable<Game> Games { get; }
-        IEnumerable<Game> CategoryGames { get; }
+       List<Game> Games { get; }
+       List<Game> CategoryGames { get; }
         Game GetGameById(int id);
     }
 }

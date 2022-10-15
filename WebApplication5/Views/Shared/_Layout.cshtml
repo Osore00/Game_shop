@@ -5,363 +5,87 @@
             // инициализация слайдера
             new ItcSimpleSlider('.itcss', {
                 loop: true,
-                autoplay: false,
+                autoplay: true,
                 interval: 5000,
                 swipe: true,
             });
         });
     </script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    
-
-    <link href="https://store.cloudflare.steamstatic.com/public/shared/css/motiva_sans.css?v=2C1Oh9QFVTyK&amp;l=russian&amp;_cdn=cloudflare" rel="stylesheet" type="text/css">
-    <link href="https://store.cloudflare.steamstatic.com/public/shared/css/shared_global.css?v=98EH125OAv_P&amp;l=russian&amp;_cdn=cloudflare" rel="stylesheet" type="text/css">
-    <link href="https://store.cloudflare.steamstatic.com/public/css/v6/store.css?v=kPdzHiKFxtRv&amp;l=russian&amp;_cdn=cloudflare" rel="stylesheet" type="text/css">
-    <link href="https://store.cloudflare.steamstatic.com/public/css/v6/game.css?v=-uLT3t5ow-oO&amp;l=russian&amp;_cdn=cloudflare" rel="stylesheet" type="text/css">
-    <link href="https://store.cloudflare.steamstatic.com/public/shared/css/apphub.css?v=dq0k-__8MsAY&amp;l=russian&amp;_cdn=cloudflare" rel="stylesheet" type="text/css">
-    <link href="https://store.cloudflare.steamstatic.com/public/shared/css/ui-lightness/jquery-ui-1.7.2.custom.css?v=.23LkAmA0IgZV&amp;_cdn=cloudflare" rel="stylesheet" type="text/css">
-    <link href="https://store.cloudflare.steamstatic.com/public/css/v6/search.css?v=perZ_xqer0yu&amp;l=russian&amp;_cdn=cloudflare" rel="stylesheet" type="text/css">
-   
-    
-    <style>
-
-        .game_area_purchase_game, .game_area_offsite_purchase {
-            position: relative;
-            background: -webkit-linear-gradient( 150deg, rgba(226,244,255,0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
-            background: linear-gradient( -60deg, rgba(226,244,255,0.3) 5%,rgba(84, 107, 115, 0.3) 95%);
-            border-radius: 4px;
-            font-family: "Motiva Sans", Sans-serif;
-            font-weight: normal;
-            font-size: 13px;
-            color: #c6d4df;
-            padding: 16px;
-            padding-bottom: 26px;
-            margin-bottom: 28px;
-            z-index: 1;
-        }
-
-        
-
-
-        .btn-warning {
-            color: #c0d1df;
-            background-color: #304156;
-            border-color: #334761;
-        }
-   .btn-warning:hover {
-                color: #c0d1df;
-                background-color: #50637a;
-                border-color: #647a97;
-}
-        html.responsive .search_result_row {
-            padding: 5px;
-            height: auto;
-        }
-        .highlight_strip_item_new {
-    float: left;
-    height: 148px;
-    width: 297px;
-    cursor: pointer;
-    text-align: center;
-    margin: 2px;
-    background-color: #000000;
-    position: relative;
-}
-
-            html.responsive .search_result_row .col {
-                float: left;
-                display: block;
-            }
-
-        a.search_result_row.ds_collapse_flag.app_impression_tracked {
-        }
-
-        html.responsive .search_results.hide_owned .ds_owned,
-        html.responsive .search_results.hide_ignored .ds_ignored,
-        html.responsive .search_results.hide_ignored .ds_excluded_by_preferences,
-        html.responsive .search_results.hide_wishlist .ds_wishlist {
-            display: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #ffffff;
-        }
-
-        .search_result_row, .search_result_row:hover {
-            position: relative;
-            background: #000000;
-            background: rgba( 0, 0, 0, 0.2 );
-            margin-bottom: 5px;
-            display: block;
-            text-decoration: none;
-            color: #c6d4df;
-            font-family: "Motiva Sans", Sans-serif;
-            font-weight: 300; /* light */
-        }
-
-        .search_result_row {
-            border: 1px solid rgba( 139, 185, 224, 0 );
-        }
-
-            .search_result_row:hover {
-                border: 1px solid rgba( 139, 185, 224, 0.2 );
-                background: rgba( 0, 0, 0, 0.4 );
-            }
-
-            .search_result_row .ds_options {
-                right: auto;
-                left: 100px;
-            }
-
-            .search_result_row.ds_excluded_by_preferences .ds_options {
-                display: none;
-            }
-
-            .search_result_row .vr_required, .search_result_row .vr_supported {
-                color: #62696e;
-                position: relative;
-                top: -6px;
-                left: 2px;
-            }
-
-        #search_result_container {
-            max-width: 686px;
-        }
-
-        /* wait until dynamicstore is ready to show results */
-        .search_results.results_loading {
-            display: none;
-        }
-
-        .search_result_row {
-            height: 45px;
-            overflow: hidden;
-            transition: height 0.25s, margin 0.25s;
-        }
-
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        .b-example-divider {
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-        
-
-
-
-
-        #game_highlights .rightcol {;
-    margin: 6;
-}
-
-         .block_content{
-            height: 100%;
-
-        }
-        .block{
-            height: 85%;
-            margin: 0;
-
-        }
-        .game_background_glow {
-            height: 100%;
-        }
-        .page_title_area{
-            height: 420;
-        }
-        .footer-bs {
-  
-  padding: 60px 40px;
-  color: rgba(255,255,255,1.00);
-  margin-bottom: 20px;
-  border-bottom-right-radius: 6px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 6px;
-}
-.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
-.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
-.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
-.footer-bs .footer-brand p { font-size:12px; color:rgba(255,255,255,0.70); }
-
-.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
-.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
-.footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold; text-transform:uppercase; }
-.footer-bs .footer-nav ul.pages a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
-.footer-bs .footer-nav h4 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom:10px;
-}
-
-.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
-.footer-bs .footer-nav ul.list li { padding:5px 0px;}
-.footer-bs .footer-nav ul.list a { color:rgba(255,255,255,0.80); }
-.footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
-
-.footer-bs .footer-social ul { list-style:none; padding:0px; }
-.footer-bs .footer-social h4 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-.footer-bs .footer-social li { padding:5px 4px;}
-.footer-bs .footer-social a { color:rgba(255,255,255,1.00);}
-.footer-bs .footer-social a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
-
-.footer-bs .footer-ns h4 {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom:10px;
-}
-.footer-bs .footer-ns p { font-size:12px; color:rgba(255,255,255,0.70); }
-
-@@media (min-width: 768px) {
-  .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
-}
-            .nav-scroller .nav {
-                display: flex;
-                flex-wrap: nowrap;
-                padding-bottom: 1rem;
-                margin-top: -1px;
-                overflow-x: auto;
-                text-align: center;
-                white-space: nowrap;
-                -webkit-overflow-scrolling: touch;
-            }
-         
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:500,700,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:regular,500,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/slider.css">
-    <!-- Подключаем JS слайдера -->
     <script defer src="~/js/slider.js"></script>
-
-    <meta name="viewport" content="width=device-width" />
+    
     <title>@ViewBag.Title</title>
-    <!-- Подключаем CSS слайдера -->
 
 </head>
 
 <!DOCTYPE html>
-
-<header class="p-3 text-bg-dark">
-    <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/Home" class="nav-link px-2 text-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-            </ul>
-
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-            </form>
-
-            <div class="text-end">
-                <button type="button" class="btn btn-outline-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Sign-up</button>
-            </div>
-        </div>
-    </div>
-</header>
-
-
 <html>
 
-<body style="background: #1b2838; font-size: 12px; color: #ffffff">
+<body class="page__body">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container header__container">
+                <div class="header__logo">
+                    <a href="/Home">Streif</a>
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <il class="menu__item">
+                            <a href="/Home" class="menu__link">Крамниця</a>
+                        </il>
+                        <il class="menu__item">
+                            <a href="" class="menu__link">Категорії</a>
+                        </il>
+                        <il class="menu__item">
+                            <a href="" class="menu__link">Профіль</a>
+                        </il>
+                        <il class="menu__item">
+                            <a href="" class="menu__link">Адмін</a>
+                        </il>
 
-    <div class="content" data-gpnav="columns">
-        @RenderBody()
-        <footer class="footer-bs">
-            <div class="row">
-                <div class="col-md-3 footer-brand animated fadeInLeft">
-                    <h2>Logo</h2>
-                    <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
-                    <p>© 2014 BS3 UI Kit, All rights reserved</p>
-                </div>
-                <div class="col-md-4 footer-nav animated fadeInUp">
-                    <h4>Menu —</h4>
-                    <div class="col-md-6">
-                        <ul class="pages">
-                            <li><a href="#">Travel</a></li>
-                            <li><a href="#">Nature</a></li>
-                            <li><a href="#">Explores</a></li>
-                            <li><a href="#">Science</a></li>
-                            <li><a href="#">Advice</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="list">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contacts</a></li>
-                            <li><a href="#">Terms & Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-2 footer-social animated fadeInDown">
-                    <h4>Follow Us</h4>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">RSS</a></li>
                     </ul>
+                    <div class="menu__serch">
+                    </div>
+                    <div class="button_dark button">
+                        <a href="" class="button button_log">LogIn</a>
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+        @RenderBody()
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer-copyright">
+                    <div>Streif © 2013-2022</div>
+                    <div class=footer__cards>
+                        <img src="" style="height: 40px;">
+                        <img src="" style="height: 22px;margin-left: 5px;">
+                    </div>
                 </div>
-                <div class="col-md-3 footer-ns animated fadeInRight">
-                    <h4>Newsletter</h4>
-                    <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+                <div class="footer-text">
                     <p>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
-                            </span>
-                        </div><!-- /input-group -->
+                        Всі права захищені. Копіювання будь-яких матеріалів сайту заборонено! Усі назви продуктів та
+                        ігор, компаній та марок,
+                        логотипи, товарні знаки та інші матеріали є власністю відповідних власників. Лише ліцензійні
+                        ключі до всіх ігрових
+                        платформ: Steam, Uplay, Battle.net, Origin та інші. Вигідно, надійно та швидко!
                     </p>
                 </div>
             </div>
-        </footer>
-    </div>
     
+    </footer>
+    </div>
 </body>
 
 </html>

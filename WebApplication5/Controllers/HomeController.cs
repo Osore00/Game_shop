@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using NuGet.Protocol.Core.Types;
 using System.Diagnostics;
 using WebApplication5.Data;
@@ -17,7 +18,7 @@ namespace WebApplication5.Controllers
         public IActionResult Index()
         {
             ViewBag.Title = "Ігри";
-            return View(db.Games);
+            return View(db.Games.Include(c => c.Categories).ToList());
         }
 
 
