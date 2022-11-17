@@ -1,0 +1,73 @@
+﻿@model WebApplication5.Models.Purshes
+
+@{
+    ViewData["Title"] = "Деталі замовлення";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <a asp-action="MyOrders" class="back__b buy_button">Back to List</a>
+</div>
+<div class="order_check">
+    <div class="flex_b order_head">
+        <div>
+            <div>Продавець: ТОВ"Strafe"</div>
+            <div>Прокупець: @Model.User.Email</div>
+        </div>
+        <div>
+            <div class="header__logo">
+                <a href="/Home">Strafe</a>
+            </div>
+            <div>
+                <div>Email: adnrei.sh.ua.com@gmail.com</div>
+                <div>Телефон: +38(097)1108835</div>
+            </div>
+        </div>
+    </div>
+    <div class="order_cent_item">Товарний чек №@Model.Id від @Model.Date</div>
+    <div >
+        <table class="table_check">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GameKeys[0].Game.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GameKeys[0].Key)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GameKeys[0].Game.Price)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    @foreach (var item in Model.GameKeys)
+                    {
+                        int sum = 0;
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Game.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Key)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Game.Price)
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+

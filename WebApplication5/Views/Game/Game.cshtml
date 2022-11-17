@@ -23,7 +23,7 @@
                                 }
                             </div>
                         </div>
-                        <!-- Стрелки для перехода к предыдущему и следующему слайду -->
+                       
                         <a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
                         <a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
                     </div>
@@ -34,8 +34,9 @@
                     foreach (var item in Model.Categories)
                     {
                         <div class="long_cat">
-                            <a href="Category/Category/@item.Id">@item.Name</a>
+                            <a asp-action="Details" asp-controller="Category" asp-route-id="@item.Id">@item.Name</a>
                         </div>
+               
                     }
                     
                 }
@@ -51,9 +52,13 @@
             <div class="short__img">
                 <img src="~/img/@Model.Id/1.jpg" alt="@Model.Name">
             </div>
-            <a href="" class="short__buy">
-                <div>В КОШИК</div>
-            </a>
+
+
+            <a asp-controller="Cart" asp-action="AddToCart" asp-route-Id="@Model.Id" class="button__black_r short__buy">
+                    Добавити в кошик
+                </a>
+
+
             <div class="short_inf">
                 <div class="inf__studia inf_g">
                     <div class="left_inf">Ціна: </div>

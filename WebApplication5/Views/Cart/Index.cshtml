@@ -1,0 +1,62 @@
+﻿@using WebApplication5.ViewsModels
+@model List<CartLine>
+@{
+    ViewBag.Title = "Create";
+}
+@{
+    Layout = "_Layout";
+}
+<div class="card__head">Кошик</div>
+<div class="cart__box_nav ">
+
+   <div class="cart__box_nav cart__item">
+            <div class="c_item__name">
+      Назва
+            </div>
+            <div class="c_item__price">
+              Ціна(грн.)
+            </div>
+            <div class="c_item__count">
+                Кількість
+            </div>
+            <div class="c_item__sum">
+          Сума
+            </div>
+        </div>
+    
+</div>
+<div class="cart__box">
+    @{
+        int all_sum = 0;
+    }
+    @foreach (var item in Model)
+    {
+        <div class="cart__item">
+            <div class="c_item__name">
+                
+                @item.Game.Name
+            </div>
+            <div class="c_item__price">
+                @item.Game.Price
+            </div>
+            <div class="c_item__count">
+                @item.Quantity
+            </div>
+            <div class="c_item__sum">
+                @{
+                    int sum = item.Quantity * (int)item.Game.Price;
+                    all_sum += sum;
+                }
+                @sum
+            </div>
+            <a asp-action="RemoveFromCart" asp-route-id="@item.Game.Id">X</a>
+        </div>
+    }
+</div>
+<div class="cart__sum">
+   Всього: @all_sum грн.
+</div>
+<div class="cart__buy_div">
+    <a class="cart__buy button__red" asp-action="Order" asp-route-sum="@all_sum">Придбати</a>
+</div>
+

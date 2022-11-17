@@ -1,0 +1,66 @@
+﻿@model WebApplication5.Models.Purshes
+
+@{
+    ViewData["Title"] = "Деталі замовлення";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+<div class="flex_b">
+    <a asp-action="ListOrders" class="back__b buy_button">До замовлень</a>
+</div>
+<div class="flex_b">
+    <div>
+        <div>Id: @Model.Id </div>
+    </div>
+    <div>
+        <div>Дата: @Model.Date </div>
+    </div>
+    <div>
+        @{
+            int sum = 0;
+            foreach (var item in Model.GameKeys)
+            {
+                sum += (int)item.Game.Price;
+            }
+        }
+        <div>Сума: @sum грн.</div>
+    </div>
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Назва
+                </th>
+                <th>
+                    Ключ
+                </th>
+                <th>
+                   Ціна(грн.)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.GameKeys)
+        {
+           <tr>
+                <td>
+                @item.Game.Name
+                    </td>
+                    <td>
+                @item.Key
+                    </td>
+                    <td>
+                @item.Game.Price
+                        
+                </td>
+                </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+

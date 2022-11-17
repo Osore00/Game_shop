@@ -1,0 +1,28 @@
+﻿@model WebApplication5.Models.Category
+
+@{
+    ViewData["Title"] = "Creat Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Creat Category</h1>
+<hr />
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Категорія</legend>
+        <p>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <p><label asp-for="Name" class="editor-label"></label></p>
+            <input asp-for="Name" class="editor-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </p>
+        <p>
+            <input type="submit" value="Створити" class="buy_button" />
+        </p>
+    </fieldset>
+    <p>
+        <a asp-action="CategoryList" class="buy_button">Back to List</a>
+    </p>
+}

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<WebApplication5.Models.Category>
+
+@{
+
+    ViewData["Title"] = "Category";
+    Layout = "_Layout";
+}
+<div class="category_content">
+<div class="ctlg__head">Категорії</div>
+<div class="categorys_list">
+    @foreach (var item in Model)
+    {
+            <a asp-controller="Category" asp-action="Details" asp-route-id="@item.Id" class="category_box" style="background: url('/img/Categorys/@item.Id.ToString()_.jpg') 0 0/auto 100% no-repeat;">
+                <div class="category_name">@item.Name</div>
+        </a>  
+    }
+      
+</div>
+</div>

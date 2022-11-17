@@ -1,0 +1,34 @@
+﻿@model WebApplication5.Models.Category
+
+@{
+    ViewData["Title"] = Model.Name;
+    Layout = "_Layout";
+}
+
+<div class="catalog">
+    <div class="ctlg__head">@Model.Name</div>
+    <div class="ctlg__items">
+        @{
+            foreach (var item in Model.Games)
+            {
+                <a class="showcase ctlg__showcase" asp-controller = "Game" asp-action="Game" asp-route-id="@item.Id">
+                    <div class="ctlg__img"><img src="~/img/@item.Id/1.jpg" alt="Main IMG"></div>
+                    <div class="ctlg__inf">
+                        <div class="ctlg__name">@item.Name</div>
+                        <div class="ctl_categorys categorys">
+                            @{
+                                foreach (var cat in item.Categories)
+                                {
+                                    <div class="categorys__cat">@cat.Name</div>
+                                }
+
+                            }
+                        </div>
+                    </div>
+                    <div class="ctlg_price buy">@item.Price ₴</div>
+                </a>
+            }
+
+        }
+    </div>
+</div>

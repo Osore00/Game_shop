@@ -1,15 +1,19 @@
-﻿
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
 @model List<WebApplication5.Models.Game>
 @{
-    Layout = "_Layout" ;
+    Layout = "_Layout";
 }
-
-
+@inject IHttpContextAccessor _httpContextAccessor
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
 
 <div class="show_box">
-    <div class="box__head">Найпопулярніший продукт</div>
+    <div class="box__head">@Localizer["HomeMP"]</div>
     <div class="box__showcase showcase">
-        @{int top_prod = 1;
+        @{
+            int top_prod = 4;
         }
         <div class="box__big_image">
             <a href="Game/Game/@Model[top_prod].Id">
@@ -23,40 +27,39 @@
             <div class="inf__imgs">
                 @{
 
-               for (int i = 1; i < 5; i++)
+                    for (int i = 1; i < 5; i++)
                     {
-                                           <div class="inf__img">
-                        <img src="~/img/@Model[top_prod].Id/_@i.ToString()_.jpg" alt="">
-                    </div> 
+                        <div class="inf__img">
+                            <img src="~/img/@Model[top_prod].Id/_@i.ToString()_.jpg" alt="">
+                        </div>
                     }
 
                 }
             </div>
             <div class="inf__categorys categorys">
-         
+
                 @{
                     foreach (var item in Model[top_prod].Categories)
                     {
-                        <div class="categorys__cat"><a href="/Home/CategoryList/@item.Id" class="cat__link">@item.Name</a></div>
+                        <div class="categorys__cat"><a asp-action="Details" asp-controller="Category" asp-route-id="@item.Id" class="cat__link">@item.Name</a></div>
                     }
                 }
-               
+
             </div>
             <div class="buy">
                 <div class="buy__price">
                     @Model[top_prod].Price ₴
                 </div>
                 <div class="buy_button">
-                    <a href="" class="buy__link">В кошик</a>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@top_prod" class="buy__link">@Localizer["HomeAddToCart"]</a>
                 </div>
             </div>
 
         </div>
     </div>
 </div>
-@Html.ActionLink("Добавити гравця", "Create")
 <div class="catalog">
-    <div class="ctlg__head">Каталог</div>
+    <div class="ctlg__head">@Localizer["HomeCat"]</div>
     <div class="ctlg__items">
        @{foreach (var item in Model)
             {
@@ -75,16 +78,11 @@
                         </div>
                     </div>
                     <div class="ctlg_price buy">@item.Price ₴</div>
-                    @Html.ActionLink("Редагувати", "Edit", new { id = item.Id })
-                    @Html.ActionLink("Видалити", "Delete", new { id = item.Id })
                 </a>
             }
             
         }
         </div>
-    <p>
-        @Html.ActionLink("Каталог жанрів", "ListCategorys")
-    </p>
 
 </div>
 

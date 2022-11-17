@@ -1,8 +1,15 @@
-﻿<head>
+﻿@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+@using WebApplication5.Controllers
+@inject IHttpContextAccessor _httpContextAccessor
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+<head>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // инициализация слайдера
             new ItcSimpleSlider('.itcss', {
                 loop: true,
                 autoplay: true,
@@ -18,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:regular,500,600,700" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="stylesheet" href="~/css/slider.css">
-    <script defer src="~/js/slider.js"></script>
+   
     
     <title>@ViewBag.Title</title>
 
@@ -32,29 +39,47 @@
         <header class="header">
             <div class="container header__container">
                 <div class="header__logo">
-                    <a href="/Home">Streif</a>
+                    <a href="/Home">Strafe</a>
                 </div>
                 <nav class="header__menu menu">
                     <ul class="menu__list">
                         <il class="menu__item">
-                            <a href="/Home" class="menu__link">Крамниця</a>
+                            <a href="/Home" class="menu__link">@Localizer["HeaderCatal"]</a>
                         </il>
                         <il class="menu__item">
-                            <a href="" class="menu__link">Категорії</a>
+                            <a asp-controller="Category" asp-action="CategoryList" class="menu__link">@Localizer["HeaderCateg"]</a>
                         </il>
-                        <il class="menu__item">
-                            <a href="" class="menu__link">Профіль</a>
-                        </il>
-                        <il class="menu__item">
-                            <a href="" class="menu__link">Адмін</a>
-                        </il>
+                        @{
+                            if (User.IsInRole(WebApplication5.AppC.AdminRole)){
+                                    <il class="menu__item">
+                                    <a href="/Admin" class="menu__link">@Localizer["HeaderAdmin"]</a>
+                                    </il>
+                            }
 
+                          }
+
+                        <partial name="_LoginPartial" />
                     </ul>
-                    <div class="menu__serch">
-                    </div>
-                    <div class="button_dark button">
-                        <a href="" class="button button_log">LogIn</a>
-                    </div>
+  
+                            @{
+                                var cart = _httpContextAccessor.HttpContext.Session.Get<List<CartLine>>("cart");
+                                int count = 0;
+                            }
+                            @if (cart!=null)
+                            {
+                        <a asp-action="index" asp-controller="Cart" class="button__red button__cart ">
+                                    @{
+                                        count = cart.Count();
+                                    }
+                            <span>@count</span>
+                        </a>
+                            }
+                            else
+                            {
+                        <a asp-action="index" asp-controller="Cart" class="button__red button__cart ">
+                                 <span>@count</span> 
+                                </a>
+                            }
                 </nav>
 
             </div>
@@ -63,23 +88,36 @@
             <div class="main__container">
         @RenderBody()
             </div>
+            @{
+                var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+                var cultureItems = LocOptions.Value.SupportedUICultures
+                .Select(c => new SelectListItem { Value = c.Name, Text = c.NativeName })
+                .ToList();
+                requestCulture = Context.Features.Get<IRequestCultureFeature>();
+            }
+
         </main>
         <footer class="footer">
             <div class="footer__container">
                 <div class="footer-copyright">
-                    <div>Streif © 2013-2022</div>
+                    <div>Strafe © 2022</div>
                     <div class=footer__cards>
-                        <img src="" style="height: 40px;">
-                        <img src="" style="height: 22px;margin-left: 5px;">
+                        <img src="/img/visa.svg" style="height: 40px;">
+                        <img src="/img/mastercard.svg" style="height: 22px;margin-left: 5px;">
+                        <form asp-controller="Home" asp-action="SetLanguage" style="margin-top:20px;"
+                              asp-route-returnUrl="@Context.Request.Path"
+                              method="post" class="form-horizontal">
+                          <select name="culture" onchange="this.form.submit();"
+                                              asp-for="@requestCulture.RequestCulture.UICulture.Name"
+                                              asp-items="cultureItems"></select>
+                        </form>
+
+                       
                     </div>
                 </div>
                 <div class="footer-text">
                     <p>
-                        Всі права захищені. Копіювання будь-яких матеріалів сайту заборонено! Усі назви продуктів та
-                        ігор, компаній та марок,
-                        логотипи, товарні знаки та інші матеріали є власністю відповідних власників. Лише ліцензійні
-                        ключі до всіх ігрових
-                        платформ: Steam, Uplay, Battle.net, Origin та інші. Вигідно, надійно та швидко!
+                        @Localizer["FooterLic"]
                     </p>
                 </div>
             </div>
@@ -87,6 +125,7 @@
     </footer>
     </div>
 </body>
-
+ <script defer src="~/js/slider.js"></script>
+@RenderSection("Scripts", required: false)
 </html>
 

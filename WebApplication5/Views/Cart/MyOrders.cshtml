@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebApplication5.Models.Purshes>
+
+@{
+    ViewData["Title"] = "Мої замовлення";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div><a asp-controller="Home" asp-action="Index" class="back__b buy_button">Back To Shop</a></div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                Sum
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @{foreach (var item in Model)
+        {
+            
+            int sum = 0;
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @{
+
+                        foreach (var game in item.GameKeys)
+                        {
+                            sum += (int)game.Game.Price;
+
+                        }
+                        }
+                        @sum
+                    </td>
+                    <td>
+                        <a asp-controller="Cart" asp-action="DetailsOrder" asp-route-id="@item.Id">Details</a>
+                    </td>
+                </tr>
+        }}
+    </tbody>
+</table>

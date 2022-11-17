@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebApplication5.Models.Category>
+
+
+@{
+
+    ViewData["Title"] = "Categorys";
+    Layout = "_Layout";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+<div class="flex_b">
+<a asp-controller="Admin" asp-action="Index" class="buy_button back__b" >Back To Menu</a>
+<a asp-controller="Admin" asp-action="CreatCat" asp-route-area="Admin" class="buy_button add__b">Create New</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <a asp-controller="Admin" asp-action="EditCat" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-controller="Admin" asp-action="DeleteCat" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

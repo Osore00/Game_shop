@@ -1,0 +1,45 @@
+﻿@model WebApplication5.ViewsModels.UserOdrderCart
+
+@{
+    ViewData["Title"] = "Order";
+}
+@{
+    Layout = "_Layout";
+}
+
+<h1>Замовлення</h1>
+
+<hr />
+<div class="row_order">
+    
+        <form asp-action="Order">
+        <div class="col-md-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input type="hidden" asp-for="@Model.User.Id" />
+                <label asp-for="User.Email" class="control-label"></label>
+                <input asp-for="User.Email" readonly class="form-control" />
+                <span asp-validation-for="User.Email" class="text-danger"></span>
+            </div>
+            <div>
+                @{
+                for (int i = 0; i < Model.cartLines.Count; i++)
+                {
+                        <input type="hidden" asp-for="@Model.cartLines[i].Game.Id"/>
+                        <input type="hidden" asp-for="@Model.cartLines[i].Quantity" />
+                }
+                } 
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Замовити" class="btn-primary button__red" />
+
+                </div>
+            </div>
+            </form>
+
+    </div>
+
+    <div>
+        <a asp-action="Index">До кошика</a>
+    </div>
+
