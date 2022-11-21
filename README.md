@@ -1,3 +1,3 @@
 # Game_shop
-EBAV YA ETU HUYNYU ффффффффффффффф
-+ develope
+ASP.Net Core MVC 6
+EntityFramework Core
